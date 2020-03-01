@@ -5,7 +5,9 @@ require_once './functions/eratosthene.php';
 
 if (isset($_POST['frmFormArray'])) {
     $n = isset($_POST['valeur']) ? $_POST['valeur'] : '';
-    var_dump(eratosthene($n));
+    $n = generateArray($n);
+
+    $resultat = eratosthene($n);
 }
 
 else {
